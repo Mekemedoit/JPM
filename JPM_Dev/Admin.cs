@@ -20,7 +20,6 @@ namespace JPM_Dev
 
         private void Admin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -33,27 +32,31 @@ namespace JPM_Dev
 
         }
 
-        private void profile_Click(object sender, EventArgs e) //would go straight to ProfileManagement
+        private void profile_Click(object sender, EventArgs e)
         {
-            // Create an instance of the ProfileManagement form
             ProfileManagement profileForm = new ProfileManagement();
-
-            // Show the ProfileManagement form
             profileForm.Show();
-
-            // Hide the current Admin form (optional)
             this.Hide();
         }
 
-        private void task_Click(object sender, EventArgs e) // would go straight to TaskManagement
+        private void task_Click(object sender, EventArgs e)
         {
-            // Create an instance of the TaskManagement form
             TaskManagement taskForm = new TaskManagement();
-
-            // Show the TaskManagement form
             taskForm.Show();
+            this.Hide();
+        }
 
-            // Hide the current Admin form (optional)
+        private void project_Click(object sender, EventArgs e)
+        {
+            ProjectManagement projectForm = new ProjectManagement();
+            projectForm.Show();
+            this.Hide();
+        }
+
+        private void report_Click(object sender, EventArgs e)
+        {
+            ReportMonitoring reportForm = new ReportMonitoring();
+            reportForm.Show();
             this.Hide();
         }
     }

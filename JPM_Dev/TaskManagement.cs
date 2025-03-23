@@ -15,12 +15,12 @@ namespace JPM_Dev
         public TaskManagement()
         {
             InitializeComponent();
-            this.FormClosed += TaskManagement_FormClosed; 
+            this.FormClosed += TaskManagement_FormClosed;
         }
 
         private void TaskManagement_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit(); 
+            this.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -51,6 +51,12 @@ namespace JPM_Dev
         private void TaskManagement_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Admin adminForm = new Admin();
+            adminForm.Show();
         }
     }
 }

@@ -78,7 +78,7 @@
             pictureBox1.Location = new Point(53, 36);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(170, 120);
+            pictureBox1.Size = new Size(170, 125);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -96,6 +96,7 @@
             report.TabIndex = 4;
             report.Text = "Report Monitoring";
             report.UseVisualStyleBackColor = false;
+            report.Click += report_Click;
             // 
             // project
             // 
@@ -109,6 +110,7 @@
             project.TabIndex = 3;
             project.Text = "Project Management";
             project.UseVisualStyleBackColor = false;
+            project.Click += project_Click;
             // 
             // task
             // 
@@ -185,7 +187,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.GhostWhite;
-            ClientSize = new Size(1133, 552);
+            ClientSize = new Size(1133, 567);
             Controls.Add(panel2);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
