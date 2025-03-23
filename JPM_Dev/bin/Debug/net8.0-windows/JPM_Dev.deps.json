@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "JPM_Dev/1.0.0": {
+        "runtime": {
+          "JPM_Dev.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JPM_Dev/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
