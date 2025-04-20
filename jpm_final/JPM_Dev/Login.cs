@@ -24,17 +24,28 @@ namespace JPM_Dev
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            string validUsername = "admin";
-            string validPassword = "password123";
-
             string username = userTxtBox.Text;
             string password = passwordTxtBox.Text;
 
-            if (username == validUsername && password == validPassword)
+            if (username == "admin" && password == "password123")
             {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Welcome Admin!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Admin adminForm = new Admin();
                 adminForm.Show();
+                this.Hide();
+            }
+            else if (username == "editor" && password == "editorpass")
+            {
+                MessageBox.Show("Welcome Editor!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Editor editorForm = new Editor();
+                editorForm.Show();
+                this.Hide();
+            }
+            else if (username == "collab" && password == "collabpass")
+            {
+                MessageBox.Show("Welcome Collaborator!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Collaborator collabForm = new Collaborator();
+                collabForm.Show();
                 this.Hide();
             }
             else
@@ -42,5 +53,6 @@ namespace JPM_Dev
                 MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

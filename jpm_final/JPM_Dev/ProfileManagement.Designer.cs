@@ -46,7 +46,7 @@
             txtFirstName.Size = new Size(395, 27);
             txtFirstName.TabIndex = 0;
             txtFirstName.Text = "First Name";
-            txtFirstName.TextChanged += txtFirstName;
+            //txtFirstName.TextChanged += txtFirstName;
             // 
             // txtLastName
             // 
@@ -57,7 +57,7 @@
             txtLastName.Size = new Size(395, 27);
             txtLastName.TabIndex = 1;
             txtLastName.Text = "Last Name";
-            txtLastName.TextChanged += txtLastName;
+            //txtLastName.TextChanged += txtLastName;
             // 
             // txtRole
             // 
@@ -68,7 +68,7 @@
             txtRole.Size = new Size(395, 27);
             txtRole.TabIndex = 2;
             txtRole.Text = "Role";
-            txtRole.TextChanged += txtRole;
+            //txtRole.TextChanged += txtRole;
             // 
             // txtEmail
             // 

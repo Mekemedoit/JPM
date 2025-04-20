@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JPM_Dev")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b0407fa6640a12aaf6bd6cb46f45cbd7dbbaa07")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+842e46b8e68ae22e12f6ce642387ad0640c6ec7c")]
 [assembly: System.Reflection.AssemblyProductAttribute("JPM_Dev")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JPM_Dev")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

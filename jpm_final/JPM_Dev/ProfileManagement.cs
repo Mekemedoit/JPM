@@ -49,7 +49,7 @@ namespace JPM_Dev
             }
 
             // Database connection string (Modify with actual details)
-            string connectionString = "Data Source=WHELLMIE\\MSSQLSERVER01;Initial Catalog=JPM_Database;Integrated Security=True;";
+            string connectionString = "Data Source=DESKTOP-I5HJN5A\\MSSQLSERVER01;Initial Catalog=JPM_Dev;Integrated Security=True;";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
