@@ -76,3 +76,5 @@ C:\Users\Kyan\Source\Repos\JPM\jpm_final\JPM_Dev\obj\Debug\net8.0-windows\JPM_De
 C:\Users\Kyan\Source\Repos\JPM\jpm_final\JPM_Dev\obj\Debug\net8.0-windows\ref\JPM_Dev.dll
 C:\Users\Kyan\Source\Repos\JPM\jpm_final\JPM_Dev\obj\Debug\net8.0-windows\JPM_Dev.Collaborator.resources
 C:\Users\Kyan\Source\Repos\JPM\jpm_final\JPM_Dev\obj\Debug\net8.0-windows\JPM_Dev.Editor.resources
+C:\Users\Kyan\Source\Repos\JPM\jpm_final\JPM_Dev\obj\Debug\net8.0-windows\JPM_Dev.TaskSubmissionForm.resources
+C:\Users\Kyan\Source\Repos\JPM\jpm_final\JPM_Dev\obj\Debug\net8.0-windows\JPM_Dev.ChatForm.resources

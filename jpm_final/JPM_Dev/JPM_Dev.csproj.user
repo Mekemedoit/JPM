@@ -4,6 +4,9 @@
     <Compile Update="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Collaborator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,6 +26,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TaskManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TaskSubmissionForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

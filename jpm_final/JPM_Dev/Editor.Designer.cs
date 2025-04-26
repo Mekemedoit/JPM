@@ -30,16 +30,25 @@
         {
             taskListPanel = new FlowLayoutPanel();
             addTaskButton = new Button();
-            panel1 = new Panel();
+            BacklogPanel = new Panel();
+            Backlogtxt = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             button1 = new Button();
-            panel2 = new Panel();
-            panel3 = new Panel();
+            toDoPanel = new Panel();
+            label1 = new Label();
+            inProgressPanel = new Panel();
+            label2 = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
             button2 = new Button();
-            panel4 = new Panel();
+            donePanel = new Panel();
+            label3 = new Label();
             flowLayoutPanel3 = new FlowLayoutPanel();
             button3 = new Button();
+            ChatButton = new Button();
+            BacklogPanel.SuspendLayout();
+            toDoPanel.SuspendLayout();
+            inProgressPanel.SuspendLayout();
+            donePanel.SuspendLayout();
             SuspendLayout();
             // 
             // taskListPanel
@@ -64,13 +73,24 @@
             addTaskButton.UseVisualStyleBackColor = true;
             addTaskButton.Click += addTaskButton_Click;
             // 
-            // panel1
+            // BacklogPanel
             // 
-            panel1.BackColor = Color.MediumPurple;
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(336, 40);
-            panel1.TabIndex = 1;
+            BacklogPanel.BackColor = Color.MediumPurple;
+            BacklogPanel.Controls.Add(Backlogtxt);
+            BacklogPanel.Location = new Point(12, 12);
+            BacklogPanel.Name = "BacklogPanel";
+            BacklogPanel.Size = new Size(336, 40);
+            BacklogPanel.TabIndex = 1;
+            // 
+            // Backlogtxt
+            // 
+            Backlogtxt.AutoSize = true;
+            Backlogtxt.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Backlogtxt.Location = new Point(117, 3);
+            Backlogtxt.Name = "Backlogtxt";
+            Backlogtxt.Size = new Size(123, 37);
+            Backlogtxt.TabIndex = 6;
+            Backlogtxt.Text = "Back Log";
             // 
             // flowLayoutPanel1
             // 
@@ -92,22 +112,45 @@
             button1.TabIndex = 2;
             button1.Text = "+ ADD NEW TASK\n\n";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += addTodoButton_Click;
             // 
-            // panel2
+            // toDoPanel
             // 
-            panel2.BackColor = Color.DodgerBlue;
-            panel2.Location = new Point(354, 12);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(336, 40);
-            panel2.TabIndex = 2;
+            toDoPanel.BackColor = Color.DodgerBlue;
+            toDoPanel.Controls.Add(label1);
+            toDoPanel.Location = new Point(354, 12);
+            toDoPanel.Name = "toDoPanel";
+            toDoPanel.Size = new Size(336, 40);
+            toDoPanel.TabIndex = 2;
             // 
-            // panel3
+            // label1
             // 
-            panel3.BackColor = Color.Orange;
-            panel3.Location = new Point(696, 12);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(336, 40);
-            panel3.TabIndex = 3;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(129, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(86, 37);
+            label1.TabIndex = 7;
+            label1.Text = "To Do";
+            // 
+            // inProgressPanel
+            // 
+            inProgressPanel.BackColor = Color.Orange;
+            inProgressPanel.Controls.Add(label2);
+            inProgressPanel.Location = new Point(696, 12);
+            inProgressPanel.Name = "inProgressPanel";
+            inProgressPanel.Size = new Size(336, 40);
+            inProgressPanel.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(94, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(147, 37);
+            label2.TabIndex = 8;
+            label2.Text = "In Progress";
             // 
             // flowLayoutPanel2
             // 
@@ -129,14 +172,26 @@
             button2.TabIndex = 4;
             button2.Text = "+ ADD NEW TASK\n\n";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += addInProgress_Click;
             // 
-            // panel4
+            // donePanel
             // 
-            panel4.BackColor = Color.Gold;
-            panel4.Location = new Point(1038, 12);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(336, 40);
-            panel4.TabIndex = 4;
+            donePanel.BackColor = Color.Gold;
+            donePanel.Controls.Add(label3);
+            donePanel.Location = new Point(1038, 12);
+            donePanel.Name = "donePanel";
+            donePanel.Size = new Size(336, 40);
+            donePanel.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(134, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(81, 37);
+            label3.TabIndex = 9;
+            label3.Text = "Done";
             // 
             // flowLayoutPanel3
             // 
@@ -158,27 +213,50 @@
             button3.TabIndex = 5;
             button3.Text = "+ ADD NEW TASK\n\n";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += addDone_Click;
+            // 
+            // ChatButton
+            // 
+            ChatButton.Location = new Point(1391, 58);
+            ChatButton.Name = "ChatButton";
+            ChatButton.Size = new Size(75, 23);
+            ChatButton.TabIndex = 6;
+            ChatButton.Text = "Chat";
+            ChatButton.UseVisualStyleBackColor = true;
+            ChatButton.Click += ChatButton_Click;
             // 
             // Editor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1473, 659);
+            ClientSize = new Size(1478, 659);
+            Controls.Add(ChatButton);
             Controls.Add(button3);
             Controls.Add(flowLayoutPanel3);
-            Controls.Add(panel4);
+            Controls.Add(donePanel);
             Controls.Add(button2);
             Controls.Add(flowLayoutPanel2);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
+            Controls.Add(inProgressPanel);
+            Controls.Add(toDoPanel);
             Controls.Add(button1);
             Controls.Add(flowLayoutPanel1);
-            Controls.Add(panel1);
+            Controls.Add(BacklogPanel);
             Controls.Add(addTaskButton);
             Controls.Add(taskListPanel);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Editor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Editor";
             Load += Editor_Load;
+            BacklogPanel.ResumeLayout(false);
+            BacklogPanel.PerformLayout();
+            toDoPanel.ResumeLayout(false);
+            toDoPanel.PerformLayout();
+            inProgressPanel.ResumeLayout(false);
+            inProgressPanel.PerformLayout();
+            donePanel.ResumeLayout(false);
+            donePanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -186,15 +264,20 @@
 
         private FlowLayoutPanel taskListPanel;
         private Button addTaskButton;
-        private Panel panel1;
+        private Panel BacklogPanel;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button1;
-        private Panel panel2;
-        private Panel panel3;
+        private Panel toDoPanel;
+        private Panel inProgressPanel;
         private FlowLayoutPanel flowLayoutPanel2;
         private Button button2;
-        private Panel panel4;
+        private Panel donePanel;
         private FlowLayoutPanel flowLayoutPanel3;
         private Button button3;
+        private Label Backlogtxt;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Button ChatButton;
     }
 }
