@@ -1,11 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace JPM_Dev
@@ -17,42 +12,85 @@ namespace JPM_Dev
             InitializeComponent();
             this.AcceptButton = loginBtn;
         }
+
         private void Login_Load(object sender, EventArgs e)
         {
-            loginPanel.BackColor = Color.FromArgb(100, 0, 0, 0);
+            
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            string username = userTxtBox.Text;
+            string email = userTxtBox.Text.Trim();
             string password = passwordTxtBox.Text;
 
-            if (username == "admin" && password == "password123")
+            // Static Admin Credentials
+            string adminEmail = "admin";
+            string adminPassword = "password123";
+
+            // Check if login is for Admin
+            if (email.Equals(adminEmail, StringComparison.OrdinalIgnoreCase) && password == adminPassword)
             {
-                MessageBox.Show("Welcome Admin!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login successful! Welcome Admin.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 Admin adminForm = new Admin();
                 adminForm.Show();
                 this.Hide();
+                return;
             }
-            else if (username == "editor" && password == "editorpass")
+
+            // If not Admin, check database
+            string connectionString = "Data Source=WHELLMIE\\MSSQLSERVER01;Initial Catalog=JPM_Database;Integrated Security=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                MessageBox.Show("Welcome Editor!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Editor editorForm = new Editor();
-                editorForm.Show();
-                this.Hide();
-            }
-            else if (username == "collab" && password == "collabpass")
-            {
-                MessageBox.Show("Welcome Collaborator!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Collaborator collabForm = new Collaborator();
-                collabForm.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT Role FROM UserProfiles WHERE Email = @Email AND Password = @Password";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@Password", password);
+
+                        var roleObj = command.ExecuteScalar();
+
+                        if (roleObj != null)
+                        {
+                            string role = roleObj.ToString();
+
+                            MessageBox.Show($"Login successful! Welcome {role}.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Form dashboardForm = null;
+
+                            switch (role)
+                            {
+                                case "Editor":
+                                    dashboardForm = new TaskForm();
+                                    break;
+                                case "Collaborator":
+                                    dashboardForm = new Collaborator();
+                                    break;
+                                default:
+                                    MessageBox.Show("Unknown role!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    return;
+                            }
+
+                            dashboardForm.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-
     }
 }

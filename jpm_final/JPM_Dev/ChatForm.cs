@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace JPM_Dev
 {
-    public partial class ChatForm : Form
+    public partial class chatForm : Form
     {
         private ListBox chatListBox;
         private TextBox messageTextBox;
         private Button sendButton;
 
-        public ChatForm()
+        public chatForm()
         {
             InitializeComponents();
 

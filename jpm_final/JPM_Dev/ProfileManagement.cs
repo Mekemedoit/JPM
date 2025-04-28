@@ -22,7 +22,7 @@ namespace JPM_Dev
             // Collect input from text fields
             string firstName = txtFirstName.Text.Trim();
             string lastName = txtLastName.Text.Trim();
-            string role = txtRole.Text.Trim();
+            string role = cmbRole.Text.Trim();
             string email = txtEmail.Text.Trim();
             string password = txtPass.Text.Trim();
             byte[] photo = null;
@@ -49,14 +49,15 @@ namespace JPM_Dev
             }
 
             // Database connection string (Modify with actual details)
-            string connectionString = "Data Source=DESKTOP-I5HJN5A\\MSSQLSERVER01;Initial Catalog=JPM_Dev;Integrated Security=True;";
+            string connectionString = "Data Source=WHELLMIE\\MSSQLSERVER01;Initial Catalog=JPM_Database;Integrated Security=True;";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "INSERT INTO UserProfile (FirstName, LastName, Role, Email, PasswordHash, Photo) " +
-                                   "VALUES (@FirstName, @LastName, @Role, @Email, @PasswordHash, @Photo)";
+                    Console.WriteLine("Connected Successfully");
+                    string query = "INSERT INTO UserProfiles (FirstName, LastName, Role, Email, Password, ProfilePhoto) " +
+                                   "VALUES (@FirstName, @LastName, @Role, @Email, @Password, @ProfilePhoto)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -64,8 +65,8 @@ namespace JPM_Dev
                         cmd.Parameters.AddWithValue("@LastName", lastName);
                         cmd.Parameters.AddWithValue("@Role", role);
                         cmd.Parameters.AddWithValue("@Email", email);
-                        cmd.Parameters.AddWithValue("@PasswordHash", hashedPassword);
-                        cmd.Parameters.AddWithValue("@Photo", (object)photo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Password", password);
+                        cmd.Parameters.AddWithValue("@ProfilePhoto", (object)photo ?? DBNull.Value);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
 
@@ -109,5 +110,7 @@ namespace JPM_Dev
                 }
             }
         }
+
+        
     }
 }

@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace JPM_Dev
 {
-    public partial class Collaborator : Form
+    public partial class TaskForm : Form
     {
 
 
 
-        public Collaborator()
+        public TaskForm()
         {
             InitializeComponent();
-            this.Load += new EventHandler(Collaborator_Load);
+            this.Load += new EventHandler(Editor_Load);
         }
 
-        private void Collaborator_Load(object sender, EventArgs e)
+        private void Editor_Load(object sender, EventArgs e)
         {
 
         }
@@ -79,11 +79,6 @@ namespace JPM_Dev
                 // Add to main list
                 taskListPanel.Controls.Add(taskPanel);
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void addTodoButton_Click(object sender, EventArgs e)
@@ -269,7 +264,6 @@ namespace JPM_Dev
             chatForm chatForm = new chatForm();
             chatForm.Show();
         }
+
     }
-
 }
-

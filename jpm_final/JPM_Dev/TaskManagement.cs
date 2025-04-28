@@ -12,46 +12,24 @@ namespace JPM_Dev
 {
     public partial class TaskManagement : Form
     {
+
+        private Admin admin;
         public TaskManagement()
         {
             InitializeComponent();
+  
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void TaskManagement_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void addTask_Click(object sender, EventArgs e)
         {
-            Admin adminForm = new Admin();
-            adminForm.Show();
-            this.Close();
+            admin.LoadFormInPanel(new AddTask());
         }
     }
 }
