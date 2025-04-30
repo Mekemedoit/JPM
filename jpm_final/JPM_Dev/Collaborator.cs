@@ -266,7 +266,7 @@ namespace JPM_Dev
 
         private void ChatButton_Click(object sender, EventArgs e)
         {
-            chatForm chatForm = new chatForm();
+            ChatForm chatForm = new ChatForm();
             chatForm.Show();
         }
     }

@@ -34,7 +34,7 @@
             passwordTxtBox = new TextBox();
             password = new Label();
             userTxtBox = new TextBox();
-            email = new Label();
+            username = new Label();
             pictureBox1 = new PictureBox();
             loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -49,7 +49,7 @@
             loginPanel.Controls.Add(passwordTxtBox);
             loginPanel.Controls.Add(password);
             loginPanel.Controls.Add(userTxtBox);
-            loginPanel.Controls.Add(email);
+            loginPanel.Controls.Add(username);
             loginPanel.Controls.Add(pictureBox1);
             loginPanel.Location = new Point(426, 103);
             loginPanel.Name = "loginPanel";
@@ -114,18 +114,18 @@
             userTxtBox.Size = new Size(282, 27);
             userTxtBox.TabIndex = 8;
             // 
-            // email
+            // username
             // 
-            email.AutoSize = true;
-            email.BackColor = Color.Transparent;
-            email.Font = new Font("Century Gothic", 12F);
-            email.ForeColor = SystemColors.ControlLightLight;
-            email.Location = new Point(20, 226);
-            email.Margin = new Padding(2, 0, 2, 0);
-            email.Name = "email";
-            email.Size = new Size(55, 21);
-            email.TabIndex = 7;
-            email.Text = "Email:";
+            username.AutoSize = true;
+            username.BackColor = Color.Transparent;
+            username.Font = new Font("Century Gothic", 12F);
+            username.ForeColor = SystemColors.ControlLightLight;
+            username.Location = new Point(20, 226);
+            username.Margin = new Padding(2, 0, 2, 0);
+            username.Name = "username";
+            username.Size = new Size(92, 21);
+            username.TabIndex = 7;
+            username.Text = "Username:";
             // 
             // pictureBox1
             // 
@@ -168,7 +168,7 @@
         private TextBox passwordTxtBox;
         private Label password;
         private TextBox userTxtBox;
-        private Label email;
+        private Label username;
         private PictureBox pictureBox1;
         private Label label1;
     }

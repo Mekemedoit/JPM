@@ -21,15 +21,14 @@ namespace JPM_Dev
         {
 
         }
-        public void LoadFormInPanel(Form childForm)
+        private void LoadFormInPanel(Form form)
         {
-            panelMain.Controls.Clear();
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(childForm);
-            panelMain.Tag = childForm;
-            childForm.Show();
+            panel2.Controls.Clear(); // Clear existing controls
+            form.TopLevel = false; // Allow embedding in panel
+            form.FormBorderStyle = FormBorderStyle.None; // Remove title bar
+            form.Dock = DockStyle.Fill; // Make the form fill the panel
+            panel2.Controls.Add(form); // Add form to panel
+            form.Show(); // Display the form
         }
 
         // Button Click Events
@@ -71,17 +70,6 @@ namespace JPM_Dev
                 Login loginForm = new Login(); // Replace with actual login form
                 loginForm.Show();
             }
-        }
-
-        private void chat_Click(object sender, EventArgs e)
-        {
-            chatForm chat = chatForm();
-            chat.Show();
-        }
-
-        private chatForm chatForm()
-        {
-            throw new NotImplementedException();
         }
     }
 }

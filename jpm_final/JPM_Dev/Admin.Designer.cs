@@ -40,7 +40,7 @@
             user = new PictureBox();
             notification = new PictureBox();
             chat = new PictureBox();
-            panelMain = new Panel();
+            panel2 = new Panel();
             contextMenuStrip1 = new ContextMenuStrip(components);
             editProfileToolStripMenuItem = new ToolStripMenuItem();
             logoutToolStripMenuItem = new ToolStripMenuItem();
@@ -177,16 +177,15 @@
             chat.SizeMode = PictureBoxSizeMode.StretchImage;
             chat.TabIndex = 3;
             chat.TabStop = false;
-            chat.Click += chat_Click;
             // 
-            // panelMain
+            // panel2
             // 
-            panelMain.BackColor = Color.Lavender;
-            panelMain.Location = new Point(316, 64);
-            panelMain.Margin = new Padding(2);
-            panelMain.Name = "panelMain";
-            panelMain.Size = new Size(778, 491);
-            panelMain.TabIndex = 4;
+            panel2.BackColor = Color.Lavender;
+            panel2.Location = new Point(316, 64);
+            panel2.Margin = new Padding(2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(778, 491);
+            panel2.TabIndex = 4;
             // 
             // contextMenuStrip1
             // 
@@ -213,7 +212,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.GhostWhite;
             ClientSize = new Size(1127, 569);
-            Controls.Add(panelMain);
+            Controls.Add(panel2);
             Controls.Add(chat);
             Controls.Add(notification);
             Controls.Add(user);
@@ -244,7 +243,7 @@
         private PictureBox user;
         private PictureBox notification;
         private PictureBox chat;
-        private Panel panelMain;
+        private Panel panel2;
         private Label label1;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem editProfileToolStripMenuItem;

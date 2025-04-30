@@ -30,12 +30,11 @@
         {
             txtFirstName = new TextBox();
             txtLastName = new TextBox();
+            txtRole = new TextBox();
             txtEmail = new TextBox();
             saveBtn = new Button();
             txtPass = new TextBox();
-            picProfile = new PictureBox();
-            cmbRole = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)picProfile).BeginInit();
+            picProfile = new Button();
             SuspendLayout();
             // 
             // txtFirstName
@@ -44,9 +43,10 @@
             txtFirstName.Location = new Point(38, 72);
             txtFirstName.Margin = new Padding(2);
             txtFirstName.Name = "txtFirstName";
-            txtFirstName.PlaceholderText = "First Name";
             txtFirstName.Size = new Size(395, 27);
             txtFirstName.TabIndex = 0;
+            txtFirstName.Text = "First Name";
+            //txtFirstName.TextChanged += txtFirstName;
             // 
             // txtLastName
             // 
@@ -54,9 +54,21 @@
             txtLastName.Location = new Point(38, 125);
             txtLastName.Margin = new Padding(2);
             txtLastName.Name = "txtLastName";
-            txtLastName.PlaceholderText = "Last Name";
             txtLastName.Size = new Size(395, 27);
             txtLastName.TabIndex = 1;
+            txtLastName.Text = "Last Name";
+            //txtLastName.TextChanged += txtLastName;
+            // 
+            // txtRole
+            // 
+            txtRole.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtRole.Location = new Point(38, 181);
+            txtRole.Margin = new Padding(2);
+            txtRole.Name = "txtRole";
+            txtRole.Size = new Size(395, 27);
+            txtRole.TabIndex = 2;
+            txtRole.Text = "Role";
+            //txtRole.TextChanged += txtRole;
             // 
             // txtEmail
             // 
@@ -64,9 +76,9 @@
             txtEmail.Location = new Point(38, 237);
             txtEmail.Margin = new Padding(2);
             txtEmail.Name = "txtEmail";
-            txtEmail.PlaceholderText = "Email";
             txtEmail.Size = new Size(395, 27);
             txtEmail.TabIndex = 3;
+            txtEmail.Text = "Email Address";
             // 
             // saveBtn
             // 
@@ -85,31 +97,19 @@
             txtPass.Location = new Point(38, 293);
             txtPass.Margin = new Padding(2);
             txtPass.Name = "txtPass";
-            txtPass.PlaceholderText = "Password";
             txtPass.Size = new Size(395, 27);
             txtPass.TabIndex = 5;
+            txtPass.Text = "Password";
             // 
             // picProfile
             // 
-            picProfile.BackColor = Color.WhiteSmoke;
-            picProfile.BorderStyle = BorderStyle.FixedSingle;
+            picProfile.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             picProfile.Location = new Point(552, 72);
             picProfile.Name = "picProfile";
             picProfile.Size = new Size(158, 136);
-            picProfile.SizeMode = PictureBoxSizeMode.StretchImage;
             picProfile.TabIndex = 6;
-            picProfile.TabStop = false;
-            picProfile.Click += btnAttachPhoto_Click;
-            // 
-            // cmbRole
-            // 
-            cmbRole.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbRole.FormattingEnabled = true;
-            cmbRole.Items.AddRange(new object[] { "Editor", "Collaborator" });
-            cmbRole.Location = new Point(38, 179);
-            cmbRole.Name = "cmbRole";
-            cmbRole.Size = new Size(285, 29);
-            cmbRole.TabIndex = 7;
+            picProfile.Text = "Attach Photo";
+            picProfile.UseVisualStyleBackColor = true;
             // 
             // ProfileManagement
             // 
@@ -117,17 +117,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             ClientSize = new Size(767, 436);
-            Controls.Add(cmbRole);
             Controls.Add(picProfile);
             Controls.Add(txtPass);
             Controls.Add(saveBtn);
             Controls.Add(txtEmail);
+            Controls.Add(txtRole);
             Controls.Add(txtLastName);
             Controls.Add(txtFirstName);
             Margin = new Padding(2);
             Name = "ProfileManagement";
             Load += ProfileManagement_Load;
-            ((System.ComponentModel.ISupportInitialize)picProfile).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,10 +135,10 @@
 
         private TextBox txtFirstName;
         private TextBox txtLastName;
+        private TextBox txtRole;
         private TextBox txtEmail;
         private Button saveBtn;
         private TextBox txtPass;
-        private PictureBox picProfile;
-        private ComboBox cmbRole;
+        private Button picProfile;
     }
 }

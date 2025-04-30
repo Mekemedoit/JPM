@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace JPM_Dev
 {
-    public partial class chatForm : Form
+    public partial class ChatForm : Form
     {
         private ListBox chatListBox;
         private TextBox messageTextBox;
         private Button sendButton;
 
-        public chatForm()
+        public ChatForm()
         {
             InitializeComponents();
 
@@ -104,5 +104,29 @@ namespace JPM_Dev
                 return "I'm not sure how to respond to that.";
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
