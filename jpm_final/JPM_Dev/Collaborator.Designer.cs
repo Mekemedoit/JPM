@@ -244,7 +244,7 @@
             Controls.Add(panel1);
             Controls.Add(addTaskButton);
             Controls.Add(taskListPanel);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             Name = "Collaborator";
             StartPosition = FormStartPosition.CenterScreen;

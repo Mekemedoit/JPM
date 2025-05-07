@@ -65,6 +65,7 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             panel4 = new Panel();
+            button1 = new Button();
             flowLayoutPanel9 = new FlowLayoutPanel();
             label12 = new Label();
             dateTimePicker8 = new DateTimePicker();
@@ -78,7 +79,6 @@
             dateTimePicker2 = new DateTimePicker();
             pictureBox2 = new PictureBox();
             label3 = new Label();
-            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             flowLayoutPanel7.SuspendLayout();
@@ -105,6 +105,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.DarkMagenta;
             panel1.Controls.Add(panel10);
             panel1.Controls.Add(panel9);
@@ -114,7 +115,7 @@
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(monthCalendar1);
             panel1.Location = new Point(8, 7);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(242, 411);
             panel1.TabIndex = 0;
@@ -123,7 +124,7 @@
             // 
             panel10.BackColor = Color.LavenderBlush;
             panel10.Location = new Point(10, 368);
-            panel10.Margin = new Padding(2, 2, 2, 2);
+            panel10.Margin = new Padding(2);
             panel10.Name = "panel10";
             panel10.Size = new Size(227, 25);
             panel10.TabIndex = 11;
@@ -132,7 +133,7 @@
             // 
             panel9.BackColor = Color.LavenderBlush;
             panel9.Location = new Point(10, 339);
-            panel9.Margin = new Padding(2, 2, 2, 2);
+            panel9.Margin = new Padding(2);
             panel9.Name = "panel9";
             panel9.Size = new Size(227, 25);
             panel9.TabIndex = 11;
@@ -141,7 +142,7 @@
             // 
             panel8.BackColor = Color.LavenderBlush;
             panel8.Location = new Point(10, 310);
-            panel8.Margin = new Padding(2, 2, 2, 2);
+            panel8.Margin = new Padding(2);
             panel8.Name = "panel8";
             panel8.Size = new Size(227, 25);
             panel8.TabIndex = 11;
@@ -150,7 +151,7 @@
             // 
             panel7.BackColor = Color.LavenderBlush;
             panel7.Location = new Point(10, 281);
-            panel7.Margin = new Padding(2, 2, 2, 2);
+            panel7.Margin = new Padding(2);
             panel7.Name = "panel7";
             panel7.Size = new Size(227, 25);
             panel7.TabIndex = 11;
@@ -159,7 +160,7 @@
             // 
             panel6.BackColor = Color.LavenderBlush;
             panel6.Location = new Point(10, 253);
-            panel6.Margin = new Padding(2, 2, 2, 2);
+            panel6.Margin = new Padding(2);
             panel6.Name = "panel6";
             panel6.Size = new Size(227, 25);
             panel6.TabIndex = 10;
@@ -168,13 +169,14 @@
             // 
             panel5.BackColor = Color.LavenderBlush;
             panel5.Location = new Point(10, 181);
-            panel5.Margin = new Padding(2, 2, 2, 2);
+            panel5.Margin = new Padding(2);
             panel5.Name = "panel5";
             panel5.Size = new Size(227, 39);
             panel5.TabIndex = 9;
             // 
             // monthCalendar1
             // 
+            monthCalendar1.Anchor = AnchorStyles.None;
             monthCalendar1.BackColor = Color.LavenderBlush;
             monthCalendar1.Location = new Point(10, 5);
             monthCalendar1.Margin = new Padding(6, 5, 6, 5);
@@ -184,12 +186,13 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.None;
             panel2.Controls.Add(flowLayoutPanel7);
             panel2.Controls.Add(flowLayoutPanel4);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(flowLayoutPanel1);
             panel2.Location = new Point(265, 7);
-            panel2.Margin = new Padding(2, 2, 2, 2);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new Size(168, 411);
             panel2.TabIndex = 1;
@@ -203,7 +206,7 @@
             flowLayoutPanel7.Controls.Add(pictureBox6);
             flowLayoutPanel7.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flowLayoutPanel7.Location = new Point(8, 233);
-            flowLayoutPanel7.Margin = new Padding(2, 2, 2, 2);
+            flowLayoutPanel7.Margin = new Padding(2);
             flowLayoutPanel7.Name = "flowLayoutPanel7";
             flowLayoutPanel7.Size = new Size(143, 73);
             flowLayoutPanel7.TabIndex = 8;
@@ -222,7 +225,7 @@
             // 
             dateTimePicker6.Font = new Font("Century Gothic", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker6.Location = new Point(2, 25);
-            dateTimePicker6.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker6.Margin = new Padding(2);
             dateTimePicker6.Name = "dateTimePicker6";
             dateTimePicker6.Size = new Size(132, 17);
             dateTimePicker6.TabIndex = 1;
@@ -230,7 +233,7 @@
             // pictureBox6
             // 
             pictureBox6.Location = new Point(2, 46);
-            pictureBox6.Margin = new Padding(2, 2, 2, 2);
+            pictureBox6.Margin = new Padding(2);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(32, 24);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -246,7 +249,7 @@
             flowLayoutPanel4.Controls.Add(pictureBox3);
             flowLayoutPanel4.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flowLayoutPanel4.Location = new Point(8, 138);
-            flowLayoutPanel4.Margin = new Padding(2, 2, 2, 2);
+            flowLayoutPanel4.Margin = new Padding(2);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
             flowLayoutPanel4.Size = new Size(143, 73);
             flowLayoutPanel4.TabIndex = 7;
@@ -265,7 +268,7 @@
             // 
             dateTimePicker3.Font = new Font("Century Gothic", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker3.Location = new Point(2, 25);
-            dateTimePicker3.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker3.Margin = new Padding(2);
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.Size = new Size(132, 17);
             dateTimePicker3.TabIndex = 1;
@@ -273,7 +276,7 @@
             // pictureBox3
             // 
             pictureBox3.Location = new Point(2, 46);
-            pictureBox3.Margin = new Padding(2, 2, 2, 2);
+            pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(32, 24);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -282,6 +285,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(36, 5);
@@ -301,7 +305,7 @@
             flowLayoutPanel1.Controls.Add(userProfile);
             flowLayoutPanel1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flowLayoutPanel1.Location = new Point(8, 45);
-            flowLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
+            flowLayoutPanel1.Margin = new Padding(2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(143, 73);
             flowLayoutPanel1.TabIndex = 0;
@@ -321,7 +325,7 @@
             // 
             deadline.Font = new Font("Century Gothic", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             deadline.Location = new Point(2, 25);
-            deadline.Margin = new Padding(2, 2, 2, 2);
+            deadline.Margin = new Padding(2);
             deadline.Name = "deadline";
             deadline.Size = new Size(132, 17);
             deadline.TabIndex = 1;
@@ -329,7 +333,7 @@
             // userProfile
             // 
             userProfile.Location = new Point(2, 46);
-            userProfile.Margin = new Padding(2, 2, 2, 2);
+            userProfile.Margin = new Padding(2);
             userProfile.Name = "userProfile";
             userProfile.Size = new Size(32, 24);
             userProfile.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -338,18 +342,20 @@
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.None;
             panel3.Controls.Add(flowLayoutPanel8);
             panel3.Controls.Add(flowLayoutPanel5);
             panel3.Controls.Add(flowLayoutPanel2);
             panel3.Controls.Add(label2);
             panel3.Location = new Point(437, 7);
-            panel3.Margin = new Padding(2, 2, 2, 2);
+            panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
             panel3.Size = new Size(173, 411);
             panel3.TabIndex = 2;
             // 
             // flowLayoutPanel8
             // 
+            flowLayoutPanel8.Anchor = AnchorStyles.None;
             flowLayoutPanel8.BackColor = Color.GhostWhite;
             flowLayoutPanel8.BorderStyle = BorderStyle.FixedSingle;
             flowLayoutPanel8.Controls.Add(label11);
@@ -357,7 +363,7 @@
             flowLayoutPanel8.Controls.Add(pictureBox7);
             flowLayoutPanel8.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flowLayoutPanel8.Location = new Point(16, 233);
-            flowLayoutPanel8.Margin = new Padding(2, 2, 2, 2);
+            flowLayoutPanel8.Margin = new Padding(2);
             flowLayoutPanel8.Name = "flowLayoutPanel8";
             flowLayoutPanel8.Size = new Size(143, 73);
             flowLayoutPanel8.TabIndex = 8;
@@ -376,7 +382,7 @@
             // 
             dateTimePicker7.Font = new Font("Century Gothic", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker7.Location = new Point(2, 25);
-            dateTimePicker7.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker7.Margin = new Padding(2);
             dateTimePicker7.Name = "dateTimePicker7";
             dateTimePicker7.Size = new Size(132, 17);
             dateTimePicker7.TabIndex = 1;
@@ -384,7 +390,7 @@
             // pictureBox7
             // 
             pictureBox7.Location = new Point(2, 46);
-            pictureBox7.Margin = new Padding(2, 2, 2, 2);
+            pictureBox7.Margin = new Padding(2);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(32, 24);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -400,7 +406,7 @@
             flowLayoutPanel5.Controls.Add(pictureBox4);
             flowLayoutPanel5.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flowLayoutPanel5.Location = new Point(16, 139);
-            flowLayoutPanel5.Margin = new Padding(2, 2, 2, 2);
+            flowLayoutPanel5.Margin = new Padding(2);
             flowLayoutPanel5.Name = "flowLayoutPanel5";
             flowLayoutPanel5.Size = new Size(143, 73);
             flowLayoutPanel5.TabIndex = 7;
@@ -419,7 +425,7 @@
             // 
             dateTimePicker4.Font = new Font("Century Gothic", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker4.Location = new Point(2, 25);
-            dateTimePicker4.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker4.Margin = new Padding(2);
             dateTimePicker4.Name = "dateTimePicker4";
             dateTimePicker4.Size = new Size(132, 17);
             dateTimePicker4.TabIndex = 1;
@@ -427,7 +433,7 @@
             // pictureBox4
             // 
             pictureBox4.Location = new Point(2, 46);
-            pictureBox4.Margin = new Padding(2, 2, 2, 2);
+            pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(32, 24);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -443,7 +449,7 @@
             flowLayoutPanel2.Controls.Add(pictureBox1);
             flowLayoutPanel2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flowLayoutPanel2.Location = new Point(16, 46);
-            flowLayoutPanel2.Margin = new Padding(2, 2, 2, 2);
+            flowLayoutPanel2.Margin = new Padding(2);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(143, 73);
             flowLayoutPanel2.TabIndex = 6;
@@ -462,7 +468,7 @@
             // 
             dateTimePicker1.Font = new Font("Century Gothic", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker1.Location = new Point(2, 25);
-            dateTimePicker1.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker1.Margin = new Padding(2);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(132, 17);
             dateTimePicker1.TabIndex = 1;
@@ -470,7 +476,7 @@
             // pictureBox1
             // 
             pictureBox1.Location = new Point(2, 46);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(32, 24);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -479,6 +485,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(52, 5);
@@ -490,16 +497,28 @@
             // 
             // panel4
             // 
+            panel4.Anchor = AnchorStyles.None;
             panel4.Controls.Add(button1);
             panel4.Controls.Add(flowLayoutPanel9);
             panel4.Controls.Add(flowLayoutPanel6);
             panel4.Controls.Add(flowLayoutPanel3);
             panel4.Controls.Add(label3);
             panel4.Location = new Point(614, 7);
-            panel4.Margin = new Padding(2, 2, 2, 2);
+            panel4.Margin = new Padding(2);
             panel4.Name = "panel4";
             panel4.Size = new Size(162, 411);
             panel4.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.None;
+            button1.Location = new Point(51, 361);
+            button1.Name = "button1";
+            button1.Size = new Size(108, 47);
+            button1.TabIndex = 10;
+            button1.Text = "Close";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // flowLayoutPanel9
             // 
@@ -510,7 +529,7 @@
             flowLayoutPanel9.Controls.Add(pictureBox8);
             flowLayoutPanel9.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flowLayoutPanel9.Location = new Point(10, 233);
-            flowLayoutPanel9.Margin = new Padding(2, 2, 2, 2);
+            flowLayoutPanel9.Margin = new Padding(2);
             flowLayoutPanel9.Name = "flowLayoutPanel9";
             flowLayoutPanel9.Size = new Size(143, 73);
             flowLayoutPanel9.TabIndex = 9;
@@ -529,7 +548,7 @@
             // 
             dateTimePicker8.Font = new Font("Century Gothic", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker8.Location = new Point(2, 25);
-            dateTimePicker8.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker8.Margin = new Padding(2);
             dateTimePicker8.Name = "dateTimePicker8";
             dateTimePicker8.Size = new Size(132, 17);
             dateTimePicker8.TabIndex = 1;
@@ -537,7 +556,7 @@
             // pictureBox8
             // 
             pictureBox8.Location = new Point(2, 46);
-            pictureBox8.Margin = new Padding(2, 2, 2, 2);
+            pictureBox8.Margin = new Padding(2);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(32, 24);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -553,7 +572,7 @@
             flowLayoutPanel6.Controls.Add(pictureBox5);
             flowLayoutPanel6.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flowLayoutPanel6.Location = new Point(10, 139);
-            flowLayoutPanel6.Margin = new Padding(2, 2, 2, 2);
+            flowLayoutPanel6.Margin = new Padding(2);
             flowLayoutPanel6.Name = "flowLayoutPanel6";
             flowLayoutPanel6.Size = new Size(143, 73);
             flowLayoutPanel6.TabIndex = 8;
@@ -572,7 +591,7 @@
             // 
             dateTimePicker5.Font = new Font("Century Gothic", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker5.Location = new Point(2, 25);
-            dateTimePicker5.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker5.Margin = new Padding(2);
             dateTimePicker5.Name = "dateTimePicker5";
             dateTimePicker5.Size = new Size(132, 17);
             dateTimePicker5.TabIndex = 1;
@@ -580,7 +599,7 @@
             // pictureBox5
             // 
             pictureBox5.Location = new Point(2, 46);
-            pictureBox5.Margin = new Padding(2, 2, 2, 2);
+            pictureBox5.Margin = new Padding(2);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(32, 24);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -596,7 +615,7 @@
             flowLayoutPanel3.Controls.Add(pictureBox2);
             flowLayoutPanel3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             flowLayoutPanel3.Location = new Point(10, 45);
-            flowLayoutPanel3.Margin = new Padding(2, 2, 2, 2);
+            flowLayoutPanel3.Margin = new Padding(2);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
             flowLayoutPanel3.Size = new Size(143, 73);
             flowLayoutPanel3.TabIndex = 7;
@@ -615,7 +634,7 @@
             // 
             dateTimePicker2.Font = new Font("Century Gothic", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePicker2.Location = new Point(2, 25);
-            dateTimePicker2.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker2.Margin = new Padding(2);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(132, 17);
             dateTimePicker2.TabIndex = 1;
@@ -623,7 +642,7 @@
             // pictureBox2
             // 
             pictureBox2.Location = new Point(2, 46);
-            pictureBox2.Margin = new Padding(2, 2, 2, 2);
+            pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(32, 24);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -632,6 +651,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(45, 5);
@@ -640,16 +660,6 @@
             label3.Size = new Size(83, 15);
             label3.TabIndex = 2;
             label3.Text = "New Requests";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(51, 361);
-            button1.Name = "button1";
-            button1.Size = new Size(108, 47);
-            button1.TabIndex = 10;
-            button1.Text = "Close";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // TaskManagement
             // 
@@ -660,7 +670,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "TaskManagement";
             Text = "TaskManagement";
             Load += TaskManagement_Load;

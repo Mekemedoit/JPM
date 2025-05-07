@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace JPM_Dev
 {
@@ -19,8 +20,23 @@ namespace JPM_Dev
 
         private void Admin_Load(object sender, EventArgs e)
         {
+            System.Drawing.Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
+            this.Size = new System.Drawing.Size(Convert.ToInt32(0.5 * workingRectangle.Width), Convert.ToInt32(0.5 * workingRectangle.Height));
+            this.Location = new System.Drawing.Point(10, 10);
+
+
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(panel2.Right + 10, panel1.Bottom + 10); // adjust as needed
+            panel2.Size = new Size(this.ClientSize.Width - panel2.Left - 10, this.ClientSize.Height - panel2.Top - 10);
+
 
         }
+
+        private void Admin_Resize(object sender, EventArgs e)
+        {
+            panel2.Size = new Size(this.ClientSize.Width - panel2.Left - 10, this.ClientSize.Height - panel2.Top - 10);
+        }
+
         private void LoadFormInPanel(Form form)
         {
             panel2.Controls.Clear(); // Clear existing controls
@@ -70,6 +86,26 @@ namespace JPM_Dev
                 Login loginForm = new Login(); // Replace with actual login form
                 loginForm.Show();
             }
+        }
+
+        private void addProjectToolStripMenuItem_Click(object sender, EventArgs e) //this one here <----
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void notification_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

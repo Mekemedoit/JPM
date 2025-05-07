@@ -30,129 +30,93 @@
         {
             button1 = new Button();
             panel2 = new Panel();
+            dataGridView1 = new DataGridView();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             panel1 = new Panel();
-            panel3 = new Panel();
-            textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
             search = new Button();
+            textBox1 = new TextBox();
+            panel3 = new Panel();
+
             panel2.SuspendLayout();
-            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(1097, 34);
-            button1.Name = "button1";
-            button1.Size = new Size(117, 59);
-            button1.TabIndex = 0;
+
+            // Close button
             button1.Text = "Close";
-            button1.UseVisualStyleBackColor = true;
+            button1.Dock = DockStyle.Right;
+            button1.Width = 117;
             button1.Click += button1_Click;
-            // 
-            // panel2
-            // 
+
+            // panel2 (Main content panel)
             panel2.BackColor = Color.Lavender;
+            panel2.Dock = DockStyle.Fill;
             panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(284, 98);
-            panel2.Margin = new Padding(2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(930, 620);
-            panel2.TabIndex = 5;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(474, 34);
-            button2.Name = "button2";
-            button2.Size = new Size(117, 59);
-            button2.TabIndex = 6;
+
+            // dataGridView1 inside panel2
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            // Top buttons
             button2.Text = "DRAFT";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(662, 34);
-            button3.Name = "button3";
-            button3.Size = new Size(117, 59);
-            button3.TabIndex = 7;
             button3.Text = "IN PROGRESS";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(865, 34);
-            button4.Name = "button4";
-            button4.Size = new Size(117, 59);
-            button4.TabIndex = 8;
             button4.Text = "COMPLETE";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
+
+            button2.Width = button3.Width = button4.Width = 117;
+            button2.Height = button3.Height = button4.Height = 40;
+
+            // Arrange top buttons horizontally inside panel3
+            FlowLayoutPanel topButtonPanel = new FlowLayoutPanel();
+            topButtonPanel.Dock = DockStyle.Top;
+            topButtonPanel.Height = 60;
+            topButtonPanel.Padding = new Padding(10, 10, 0, 0);
+            topButtonPanel.Controls.Add(button2);
+            topButtonPanel.Controls.Add(button3);
+            topButtonPanel.Controls.Add(button4);
+            topButtonPanel.Controls.Add(button1); // Close button at end
+
+            // Left sidebar panel1
             panel1.BackColor = SystemColors.ScrollBar;
+            panel1.Dock = DockStyle.Left;
+            panel1.Width = 267;
             panel1.Controls.Add(search);
             panel1.Controls.Add(textBox1);
-            panel1.Location = new Point(11, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(267, 706);
-            panel1.TabIndex = 9;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.HighlightText;
-            panel3.Location = new Point(284, 98);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(930, 75);
-            panel3.TabIndex = 10;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(4, 13);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(179, 23);
-            textBox1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 71);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(930, 549);
-            dataGridView1.TabIndex = 0;
-            // 
-            // search
-            // 
-            search.Location = new Point(189, 13);
-            search.Name = "search";
-            search.Size = new Size(75, 23);
-            search.TabIndex = 1;
+
+            // Search box
+            textBox1.Top = 13;
+            textBox1.Left = 4;
+            textBox1.Width = 179;
+
             search.Text = "Search";
-            search.UseVisualStyleBackColor = true;
-            // 
-            // ProjectManagement
-            // 
+            search.Top = 13;
+            search.Left = 189;
+            search.Width = 75;
+
+            // Optional top panel (panel3)
+            panel3.Dock = DockStyle.Top;
+            panel3.Height = 20;
+            panel3.BackColor = SystemColors.HighlightText;
+
+            // Form settings
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1222, 730);
+            ClientSize = new Size(1199, 724);
+            Controls.Add(panel2);
+            Controls.Add(topButtonPanel);
             Controls.Add(panel3);
             Controls.Add(panel1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(panel2);
-            Controls.Add(button1);
-            Name = "ProjectManagement";
             Text = "ProjectManagement";
             Load += ProjectManagement_Load;
+
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
+
 
         #endregion
 

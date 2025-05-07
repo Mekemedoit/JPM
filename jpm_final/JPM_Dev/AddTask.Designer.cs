@@ -175,7 +175,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkMagenta;
-            ClientSize = new Size(823, 483);
+            ClientSize = new Size(796, 483);
             Controls.Add(saveBtn);
             Controls.Add(priorityTxt);
             Controls.Add(priorityLbl);

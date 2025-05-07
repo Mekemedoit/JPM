@@ -56,20 +56,18 @@
             taskListPanel.AutoScroll = true;
             taskListPanel.BackColor = Color.White;
             taskListPanel.FlowDirection = FlowDirection.TopDown;
-            taskListPanel.Location = new Point(17, 97);
-            taskListPanel.Margin = new Padding(4, 5, 4, 5);
+            taskListPanel.Location = new Point(12, 58);
             taskListPanel.Name = "taskListPanel";
-            taskListPanel.Size = new Size(480, 905);
+            taskListPanel.Size = new Size(336, 543);
             taskListPanel.TabIndex = 0;
             taskListPanel.WrapContents = false;
             // 
             // addTaskButton
             // 
             addTaskButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addTaskButton.Location = new Point(17, 1012);
-            addTaskButton.Margin = new Padding(4, 5, 4, 5);
+            addTaskButton.Location = new Point(12, 607);
             addTaskButton.Name = "addTaskButton";
-            addTaskButton.Size = new Size(480, 67);
+            addTaskButton.Size = new Size(336, 40);
             addTaskButton.TabIndex = 0;
             addTaskButton.Text = "+ ADD NEW TASK\n\n";
             addTaskButton.UseVisualStyleBackColor = true;
@@ -79,20 +77,18 @@
             // 
             BacklogPanel.BackColor = Color.MediumPurple;
             BacklogPanel.Controls.Add(Backlogtxt);
-            BacklogPanel.Location = new Point(17, 20);
-            BacklogPanel.Margin = new Padding(4, 5, 4, 5);
+            BacklogPanel.Location = new Point(12, 12);
             BacklogPanel.Name = "BacklogPanel";
-            BacklogPanel.Size = new Size(480, 67);
+            BacklogPanel.Size = new Size(336, 40);
             BacklogPanel.TabIndex = 1;
             // 
             // Backlogtxt
             // 
             Backlogtxt.AutoSize = true;
             Backlogtxt.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Backlogtxt.Location = new Point(167, 5);
-            Backlogtxt.Margin = new Padding(4, 0, 4, 0);
+            Backlogtxt.Location = new Point(117, 3);
             Backlogtxt.Name = "Backlogtxt";
-            Backlogtxt.Size = new Size(186, 55);
+            Backlogtxt.Size = new Size(123, 37);
             Backlogtxt.TabIndex = 6;
             Backlogtxt.Text = "Back Log";
             // 
@@ -101,20 +97,18 @@
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.BackColor = Color.White;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(506, 97);
-            flowLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
+            flowLayoutPanel1.Location = new Point(354, 58);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(480, 905);
+            flowLayoutPanel1.Size = new Size(336, 543);
             flowLayoutPanel1.TabIndex = 1;
             flowLayoutPanel1.WrapContents = false;
             // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(506, 1012);
-            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Location = new Point(354, 607);
             button1.Name = "button1";
-            button1.Size = new Size(480, 67);
+            button1.Size = new Size(336, 40);
             button1.TabIndex = 2;
             button1.Text = "+ ADD NEW TASK\n\n";
             button1.UseVisualStyleBackColor = true;
@@ -124,20 +118,18 @@
             // 
             toDoPanel.BackColor = Color.DodgerBlue;
             toDoPanel.Controls.Add(label1);
-            toDoPanel.Location = new Point(506, 20);
-            toDoPanel.Margin = new Padding(4, 5, 4, 5);
+            toDoPanel.Location = new Point(354, 12);
             toDoPanel.Name = "toDoPanel";
-            toDoPanel.Size = new Size(480, 67);
+            toDoPanel.Size = new Size(336, 40);
             toDoPanel.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(184, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(129, 0);
             label1.Name = "label1";
-            label1.Size = new Size(129, 55);
+            label1.Size = new Size(86, 37);
             label1.TabIndex = 7;
             label1.Text = "To Do";
             // 
@@ -145,20 +137,18 @@
             // 
             inProgressPanel.BackColor = Color.Orange;
             inProgressPanel.Controls.Add(label2);
-            inProgressPanel.Location = new Point(994, 20);
-            inProgressPanel.Margin = new Padding(4, 5, 4, 5);
+            inProgressPanel.Location = new Point(696, 12);
             inProgressPanel.Name = "inProgressPanel";
-            inProgressPanel.Size = new Size(480, 67);
+            inProgressPanel.Size = new Size(336, 40);
             inProgressPanel.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(134, 0);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(94, 0);
             label2.Name = "label2";
-            label2.Size = new Size(223, 55);
+            label2.Size = new Size(147, 37);
             label2.TabIndex = 8;
             label2.Text = "In Progress";
             // 
@@ -167,20 +157,18 @@
             flowLayoutPanel2.AutoScroll = true;
             flowLayoutPanel2.BackColor = Color.White;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel2.Location = new Point(994, 97);
-            flowLayoutPanel2.Margin = new Padding(4, 5, 4, 5);
+            flowLayoutPanel2.Location = new Point(696, 58);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(480, 905);
+            flowLayoutPanel2.Size = new Size(336, 543);
             flowLayoutPanel2.TabIndex = 2;
             flowLayoutPanel2.WrapContents = false;
             // 
             // button2
             // 
             button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(994, 1012);
-            button2.Margin = new Padding(4, 5, 4, 5);
+            button2.Location = new Point(696, 607);
             button2.Name = "button2";
-            button2.Size = new Size(480, 67);
+            button2.Size = new Size(336, 40);
             button2.TabIndex = 4;
             button2.Text = "+ ADD NEW TASK\n\n";
             button2.UseVisualStyleBackColor = true;
@@ -190,20 +178,18 @@
             // 
             donePanel.BackColor = Color.Gold;
             donePanel.Controls.Add(label3);
-            donePanel.Location = new Point(1483, 20);
-            donePanel.Margin = new Padding(4, 5, 4, 5);
+            donePanel.Location = new Point(1038, 12);
             donePanel.Name = "donePanel";
-            donePanel.Size = new Size(480, 67);
+            donePanel.Size = new Size(336, 40);
             donePanel.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(191, 0);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(134, 0);
             label3.Name = "label3";
-            label3.Size = new Size(121, 55);
+            label3.Size = new Size(81, 37);
             label3.TabIndex = 9;
             label3.Text = "Done";
             // 
@@ -212,20 +198,18 @@
             flowLayoutPanel3.AutoScroll = true;
             flowLayoutPanel3.BackColor = Color.White;
             flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel3.Location = new Point(1483, 97);
-            flowLayoutPanel3.Margin = new Padding(4, 5, 4, 5);
+            flowLayoutPanel3.Location = new Point(1038, 58);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(480, 905);
+            flowLayoutPanel3.Size = new Size(336, 543);
             flowLayoutPanel3.TabIndex = 3;
             flowLayoutPanel3.WrapContents = false;
             // 
             // button3
             // 
             button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(1483, 1012);
-            button3.Margin = new Padding(4, 5, 4, 5);
+            button3.Location = new Point(1038, 607);
             button3.Name = "button3";
-            button3.Size = new Size(480, 67);
+            button3.Size = new Size(336, 40);
             button3.TabIndex = 5;
             button3.Text = "+ ADD NEW TASK\n\n";
             button3.UseVisualStyleBackColor = true;
@@ -233,10 +217,9 @@
             // 
             // ChatButton
             // 
-            ChatButton.Location = new Point(1987, 97);
-            ChatButton.Margin = new Padding(4, 5, 4, 5);
+            ChatButton.Location = new Point(1391, 58);
             ChatButton.Name = "ChatButton";
-            ChatButton.Size = new Size(107, 38);
+            ChatButton.Size = new Size(75, 23);
             ChatButton.TabIndex = 6;
             ChatButton.Text = "Chat";
             ChatButton.UseVisualStyleBackColor = true;
@@ -244,9 +227,9 @@
             // 
             // Editor
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(2111, 1098);
+            ClientSize = new Size(1478, 659);
             Controls.Add(ChatButton);
             Controls.Add(button3);
             Controls.Add(flowLayoutPanel3);
@@ -260,8 +243,7 @@
             Controls.Add(BacklogPanel);
             Controls.Add(addTaskButton);
             Controls.Add(taskListPanel);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(4, 5, 4, 5);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             Name = "Editor";
             StartPosition = FormStartPosition.CenterScreen;

@@ -24,6 +24,11 @@ namespace JPM_Dev
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.TopLevel = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Dock = DockStyle.Fill;
+
+
             Admin adminForm = new Admin();
             adminForm.Show();
             this.Close();

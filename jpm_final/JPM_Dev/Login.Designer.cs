@@ -150,8 +150,10 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1320, 673);
             Controls.Add(loginPanel);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(2);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login Form";
             Load += Login_Load;
             loginPanel.ResumeLayout(false);

@@ -42,14 +42,19 @@
             chat = new PictureBox();
             panel2 = new Panel();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            addProjectToolStripMenuItem = new ToolStripMenuItem();
             editProfileToolStripMenuItem = new ToolStripMenuItem();
             logoutToolStripMenuItem = new ToolStripMenuItem();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            tableLayoutPanel1 = new TableLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)user).BeginInit();
             ((System.ComponentModel.ISupportInitialize)notification).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chat).BeginInit();
             contextMenuStrip1.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -61,16 +66,18 @@
             panel1.Controls.Add(project);
             panel1.Controls.Add(task);
             panel1.Controls.Add(profile);
-            panel1.Location = new Point(1, 1);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(267, 554);
+            panel1.Size = new Size(267, 826);
             panel1.TabIndex = 0;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label1.AutoSize = true;
-            label1.Location = new Point(24, 507);
+            label1.Location = new Point(0, 811);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(199, 15);
@@ -146,11 +153,12 @@
             // 
             // user
             // 
+            user.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             user.Image = Properties.Resources.user;
-            user.Location = new Point(1062, 21);
+            user.Location = new Point(1145, 2);
             user.Margin = new Padding(2);
             user.Name = "user";
-            user.Size = new Size(32, 28);
+            user.Size = new Size(55, 53);
             user.SizeMode = PictureBoxSizeMode.StretchImage;
             user.TabIndex = 1;
             user.TabStop = false;
@@ -158,22 +166,25 @@
             // 
             // notification
             // 
+            notification.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             notification.Image = Properties.Resources.notification;
-            notification.Location = new Point(1023, 21);
+            notification.Location = new Point(1083, 2);
             notification.Margin = new Padding(2);
             notification.Name = "notification";
-            notification.Size = new Size(35, 28);
+            notification.Size = new Size(58, 53);
             notification.SizeMode = PictureBoxSizeMode.StretchImage;
             notification.TabIndex = 2;
             notification.TabStop = false;
+            notification.Click += notification_Click;
             // 
             // chat
             // 
+            chat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             chat.Image = Properties.Resources.chat;
-            chat.Location = new Point(978, 21);
+            chat.Location = new Point(1022, 2);
             chat.Margin = new Padding(2);
             chat.Name = "chat";
-            chat.Size = new Size(41, 28);
+            chat.Size = new Size(57, 53);
             chat.SizeMode = PictureBoxSizeMode.StretchImage;
             chat.TabIndex = 3;
             chat.TabStop = false;
@@ -181,45 +192,81 @@
             // panel2
             // 
             panel2.BackColor = Color.Lavender;
-            panel2.Location = new Point(316, 64);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(2, 2);
             panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(778, 491);
+            panel2.Size = new Size(1198, 760);
             panel2.TabIndex = 4;
+            panel2.Paint += panel2_Paint;
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { editProfileToolStripMenuItem, logoutToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { addProjectToolStripMenuItem, editProfileToolStripMenuItem, logoutToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(132, 48);
+            contextMenuStrip1.Size = new Size(137, 70);
+            // 
+            // addProjectToolStripMenuItem
+            // 
+            addProjectToolStripMenuItem.Name = "addProjectToolStripMenuItem";
+            addProjectToolStripMenuItem.Size = new Size(136, 22);
+            addProjectToolStripMenuItem.Text = "Add Project";
+            addProjectToolStripMenuItem.Click += addProjectToolStripMenuItem_Click;
             // 
             // editProfileToolStripMenuItem
             // 
             editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            editProfileToolStripMenuItem.Size = new Size(131, 22);
+            editProfileToolStripMenuItem.Size = new Size(136, 22);
             editProfileToolStripMenuItem.Text = "Edit Profile";
             // 
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(131, 22);
+            logoutToolStripMenuItem.Size = new Size(136, 22);
             logoutToolStripMenuItem.Text = "Logout";
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click_1;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(user);
+            flowLayoutPanel1.Controls.Add(notification);
+            flowLayoutPanel1.Controls.Add(chat);
+            flowLayoutPanel1.Dock = DockStyle.Top;
+            flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
+            flowLayoutPanel1.Location = new Point(267, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1202, 62);
+            flowLayoutPanel1.TabIndex = 5;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(panel2, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(267, 62);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(1202, 764);
+            tableLayoutPanel1.TabIndex = 6;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.GhostWhite;
-            ClientSize = new Size(1127, 569);
-            Controls.Add(panel2);
-            Controls.Add(chat);
-            Controls.Add(notification);
-            Controls.Add(user);
+            ClientSize = new Size(1469, 826);
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
+            MaximizeBox = false;
             Name = "Admin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin";
             Load += Admin_Load;
             panel1.ResumeLayout(false);
@@ -229,6 +276,8 @@
             ((System.ComponentModel.ISupportInitialize)notification).EndInit();
             ((System.ComponentModel.ISupportInitialize)chat).EndInit();
             contextMenuStrip1.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -248,5 +297,8 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem editProfileToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
+        private ToolStripMenuItem addProjectToolStripMenuItem;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }
